@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="es"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Login - Página de acceso</title>
+    <style>
+        /* Estilos generales de la página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Centrado vertical y horizontal */
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            position: relative; /* Necesario para superponer el fondo */
+        }
+
+        /* Fondo de edificios (se aplica solo al área del cuerpo sin afectar el top blanco ni bottom gris) */
+        .background {
+            position: absolute;
+            top: 40px; /* Se ajusta para que la parte blanca no se vea afectada */
+            bottom: 50px; /* Se ajusta para que la parte gris no se vea afectada */
+            left: 0;
+            right: 0;
+            background-image: url('https://wallpaper.forfun.com/fetch/85/85d289c74bfd5f947b20b62d306ed8b0.jpeg'); /* Reemplaza con tu URL de la imagen */
+            background-size: cover;
+            background-position: center;
+            z-index: -1; /* Asegura que la imagen de fondo esté detrás del contenido */
+        }
+
+        /* Logo en la parte superior izquierda (ajustado más arriba) */
+        .logo {
+            position: absolute;
+            top: 5px; /* Mover el logo más cerca de la parte superior */
+            left: 20px;
+            width: 70px; /* Ajusta el tamaño del logo más pequeño */
+            height: auto;
+        }
+
+        /* Estilos del contenedor del formulario */
+        .login-container {
+            background-color: rgba(255, 255, 255, 1); /* Fondo blanco sólido */
+            padding: 30px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            margin-top: 100px; /* Espacio entre el logo y el formulario */
+            border: none;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: black; /* Color de las letras de "Iniciar sesión" */
+        }
+
+        /* Estilos de los inputs y el botón */
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid red;
+            border-radius: 5px;
+            background-color: #f8f8f8;
+        }
+
+        input[type="submit"] {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: darkred;
+        }
+
+        /* Espacio gris en la parte inferior */
+        .footer {
+            width: 100%;
+            background-color: #d3d3d3; /* Fondo gris */
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer button {
+            background-color: #808080; /* Color gris para los botones */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .footer button:hover {
+            background-color: #555555; /* Gris más oscuro al hacer hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo de la empresa -->
+    <img src="https://logos-world.net/wp-content/uploads/2021/02/HSBC-Logo.png" alt="Logo de la Empresa" class="logo"/> <!-- Reemplaza con la URL de tu logo -->
+
+    <div class="background"></div> <!-- Imagen de fondo de edificios -->
+
+    <div class="login-container">
+        <h2>Iniciar sesión</h2>
+        <form action="" method="POST">
+            <input type="text" name="username" placeholder="Usuario" required=""/>
+            <input type="password" name="password" placeholder="Contraseña" required=""/>
+            <input type="submit" value="Acceder"/>
+        </form>
+    </div>
+
+    <!-- Sección de pie de página con botones -->
+    <div class="footer">
+        <button>Horarios</button>
+        <button>Demos y Ayudas</button>
+        <button>Contrato</button>
+        <button>Seguridad en Línea</button>
+    </div>
+
+
+
+</body></html>
